@@ -1,0 +1,27 @@
+{
+  "name": "npm-postinstall-patch-modules",
+  "version": "0.0.0",
+  "description": "An example of how package.json postinstall script can apply patches to node_modules from a directory",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "quilt push -a -q -f --quiltrc - || true"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kapouer/npm-postinstall-patch-modules.git"
+  },
+  "keywords": [
+    "monkey-patch",
+    "npm",
+    "script"
+  ],
+  "author": "Jérémy Lal <kapouer@melix.org>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kapouer/npm-postinstall-patch-modules/issues"
+  },
+  "dependencies": {
+    "strip-json-comments": "^2.0.1"
+  }
+}
